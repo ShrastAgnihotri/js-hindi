@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time out</title>
+</head>
+<body>
+    <h1>Chai or JS</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+  const saydate = (function(str){
+    console.log(str, Date.now());
+    
+  });
+  let intervid;
+  //const intervalId = (saydate,1000,"hii");
+  const interid = document.querySelector('#start').addEventListener('click', function(){
+    intervid = setInterval(saydate,1000,"hii")
+  })
+  document.querySelector('#stop').addEventListener('click',function(){
+     clearInterval(intervid);
+     console.log("Stopped");
+     
+  })
+ 
+</script>
+</html>
